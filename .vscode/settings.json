@@ -1,8 +1,0 @@
-{
-    "python.pythonPath": "C:\\Users\\宰\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
-    "python.linting.pylintArgs":
-    [
-        "--extension-pkg-whitelist=pygame",
-        "--disable=bad-continuation"
-    ]
-}
