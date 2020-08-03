@@ -7,7 +7,7 @@ from flask_blog import app
 def show_entries():
     """ ログインしていない時の処理 session['logged_in'] = Falseの場合 """
     if not session.get('logged_in'):
-        return redirect('/login')
+        return redirect(url_for('login'))
     return render_template('entries/index.html')
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -22,12 +22,12 @@ def login():
             """ session['logged_in'] = Trueによってログイン状態の確認 """
             session['logged_in'] = True
             flash('ログインしました')
-            return redirect('/')
+            return redirect(url_for('show_entries'))
     return render_template('login.html')
 
-@app.route('/logout')
+@app.route('/logout')ss
 def logout():
     """ ログアウト後にsession情報を削除 """
     session.pop('logged_in', None)
     flash('ログアウトしました')
-    return redirect('/')
+    return redirect(url_for('show_entries'))
