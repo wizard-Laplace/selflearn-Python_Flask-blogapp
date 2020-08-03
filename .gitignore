@@ -1,5 +1,4 @@
 .vscode/setting.json
 .vscode/launch.json
 flask_blog/__pycache__/config.cpython-38.pyc
-flask_blog/__pycache__/config.cpython-38.pyc
 flask_blog/__pycache__/views.cpython-38.pyc
