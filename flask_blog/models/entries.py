@@ -4,7 +4,7 @@ from flask_blog import db
 from datetime import datetime
 
 class Entry(db.Model):
-    """ Entityクラス """
+    """ Model定義(Entity)クラス """
     __tablename__ = 'entries'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.string(50), unique=True)
