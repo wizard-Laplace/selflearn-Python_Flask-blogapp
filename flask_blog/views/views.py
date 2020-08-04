@@ -7,7 +7,7 @@ from flask_blog import app
 def login():
     """ ログイン時の処理 """
     if request.method == 'POST':
-        if request.form ['username'] != app.config['USERNAME']:
+        if request.form['username'] != app.config['USERNAME']:
             flash('ユーザ名が異なります')
         elif request.form['password'] != app.config['PASSWORD']:
             flash('パスワードが異なります')
