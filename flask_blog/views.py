@@ -25,7 +25,7 @@ def login():
             return redirect(url_for('show_entries'))
     return render_template('login.html')
 
-@app.route('/logout')ss
+@app.route('/logout')
 def logout():
     """ ログアウト後にsession情報を削除 """
     session.pop('logged_in', None)
