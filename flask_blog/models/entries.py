@@ -7,7 +7,7 @@ class Entry(db.Model):
     """ Model定義(Entity)クラス """
     __tablename__ = 'entries'
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.string(50), unique=True)
+    title = db.Column(db.String(50), unique=True)
     text = db.Column(db.Text)
     created_at = db.Column(db.Datetime)
 
