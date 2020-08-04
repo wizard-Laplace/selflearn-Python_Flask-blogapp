@@ -3,13 +3,6 @@
 from flask import request, redirect, url_for, render_template, flash, session
 from flask_blog import app
 
-@app.route('/')
-def show_entries():
-    """ ログインしていない時の処理 session['logged_in'] = Falseの場合 """
-    if not session.get('logged_in'):
-        return redirect(url_for('login'))
-    return render_template('entries/index.html')
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     """ ログイン時の処理 """
