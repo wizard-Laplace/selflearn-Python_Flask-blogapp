@@ -1,2 +1,4 @@
-.vscode/launch.json
-.vscode/settings.json
+/.vscode/*
+/flask_blog/__pycache__/*
+/flask_blog/models/__pycache__/*
+/flask_blog/views/__pycache__/*
